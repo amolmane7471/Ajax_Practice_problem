@@ -25,21 +25,23 @@ function makeAJAXCall(methodType, url, callback, async = true, data = null) {
     }
     console.log(methodType + " Request sent to server ");
 }
-
-const getURL = "http://localhost:3001/employee/1";
+//read data 
+const getURL = "http://127.0.0.1:3001/employee/3";
 function getUserDetails(data) {
     console.log("get user data: " + data);
 }
 makeAJAXCall("GET", getURL, getUserDetails);
 
+//delete data
 const deleteURL = "http://localhost:3001/employee/2";
 function userDeleted(data) {
     console.log("User Deleted : "+ data);
 }
 makeAJAXCall("DELETE", deleteURL, userDeleted, false);
 
+//insert data
 const postURL = "http://localhost:3001/employee";
-const emplData = { "name": "Hitesh", "salary": "300000" };
+const emplData = { "name": "Mehul", "salary": "400000" };
 function userAdded(data) {
     console.log("User Added: " + data);
 }
