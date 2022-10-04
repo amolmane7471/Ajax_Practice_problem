@@ -1,4 +1,4 @@
-/*Async nature of javascript*/ 
+ 
 function showTime()
 {
     const date=  new Date();
